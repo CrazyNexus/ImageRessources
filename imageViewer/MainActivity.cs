@@ -1,13 +1,14 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content.Res;
+using System.IO;
 
 namespace imageViewer
 {
 	[Activity(Label = "imageViewer", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -26,6 +27,15 @@ namespace imageViewer
 				imageView.SetImageResource(Resource.Drawable.image);
 				imageView.SetScaleType(ImageView.ScaleType.CenterCrop);
 			};
+
+			string content;
+			AssetManager assets = this.Assets;
+			using (StreamReader sr = new StreamReader(assets.Open(("myText.txt"))))
+			{
+				content = sr.ReadToEnd();
+			}
+
+			Android.Util.Log.Debug("Message for you: ", content);
 		}
 	}
 }
