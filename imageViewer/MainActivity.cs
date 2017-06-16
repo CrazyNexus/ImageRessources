@@ -28,6 +28,7 @@ namespace imageViewer
 				imageView.SetScaleType(ImageView.ScaleType.CenterCrop);
 			};
 
+			// read something from the Assets
 			string content;
 			AssetManager assets = this.Assets;
 			using (StreamReader sr = new StreamReader(assets.Open(("myText.txt"))))
