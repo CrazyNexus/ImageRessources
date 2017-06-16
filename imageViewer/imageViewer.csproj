@@ -61,12 +61,14 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable\image.JPG" />
     <AndroidResource Include="Resources\values-de\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\image.JPG" />
+    <AndroidResource Include="Resources\drawable-hdpi\image.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\values-de\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\myText.txt" />
